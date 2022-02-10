@@ -13,25 +13,28 @@ Requisito de Hardware
 Você pode usar qualquer placa de desenvolvimento ESP32-S2 ou ESP32-S3 integrada com PSRAM
 
     As câmeras que atendem aos seguintes parâmetros necessários são suportadas:
-        Câmera compatível com o modo de velocidade total USB1.1
-        A câmera vem com compressão MJPEG
-        A câmera suporta a configuração da interface Max Packet Size para 512
-        A largura de banda de transferência de imagem deve ser inferior a 4 Mbps, 
-        pois usamos 512 Bytes de tamanho de pacote com transferência isócrona, apenas um pacote pode ser transmitido por milissegundo neste modo.
-        Devido à limitação da largura de banda de transferência isócrona do USB, 
+    Câmera compatível com o modo de velocidade total USB1.1
+    A câmera vem com compressão MJPEG
+    A câmera suporta a configuração da interface Max Packet Size para 512
+    A largura de banda de transferência de imagem deve ser inferior a 4 Mbps, 
+        pois usamos 512 Bytes de tamanho de pacote com transferência isócrona, 
+        apenas um pacote pode ser transmitido por milissegundo neste modo.
+    Devido à limitação da largura de banda de transferência isócrona do USB, 
         a taxa de quadros da imagem e o tamanho da imagem única são mutuamente restritos.
-        Se o tamanho da imagem for 25 KB por quadro, a taxa de quadros não pode ultrapassar 20 FPS
-        Este exemplo oferece suporte a qualquer resolução que satisfaça as condições acima, pois nenhuma decodificação local é necessária
+    Se o tamanho da imagem for 25 KB por quadro, a taxa de quadros não pode ultrapassar 20 FPS
+    Este exemplo oferece suporte a qualquer resolução que satisfaça as condições acima, 
+    pois nenhuma decodificação local é necessária
 
     Fiação do hardware da câmera USB.
-        Por favor, use fonte de alimentação de 5V para a câmera USB VBUS, ou use IO para controlar VBUS ON/OFF.
-        Linha de dados D + D- da câmera USB, siga o alinhamento padrão do sinal diferencial regular
-        Câmera USB D+ (fio verde) para ESP32-S2/S3 GPIO20
-        Câmera USB D- (fio branco) para ESP32-S2/S3 GPIO19
+    Por favor, use fonte de alimentação de 5V para a câmera USB VBUS, ou use IO para controlar VBUS ON/OFF.
+    Linha de dados D + D- da câmera USB, siga o alinhamento padrão do sinal diferencial regular
+    Câmera USB D+ (fio verde) para ESP32-S2/S3 GPIO20
+    Câmera USB D- (fio branco) para ESP32-S2/S3 GPIO19
 
 ### Exemplo de compilação
 
-O código de exemplo requer um PSRAM adicional de 2 MB e pode ser usado com placas de desenvolvimento como ESP32-S2-Saola-1 e ESP32-S2-Kaluga-1 baseadas no módulo ESP32-S2-WROVER.
+O código de exemplo requer um PSRAM adicional de 2 MB e pode ser usado com placas de desenvolvimento como 
+ESP32-S2-Saola-1 e ESP32-S2-Kaluga-1 baseadas no módulo ESP32-S2-WROVER.
 
 1. Instalação do VStudio Code: 
 
@@ -56,7 +59,8 @@ O código de exemplo requer um PSRAM adicional de 2 MB e pode ser usado com plac
 
 Como usar
 
-    Use o acesso de PC ou dispositivos móveis ao hotspot Wi-Fi do ESP32-S2/S3, SSID: ESP32S2-UVC Sem senha por padrão
+    Use o acesso de PC ou dispositivos móveis ao hotspot Wi-Fi do ESP32-S2/S3, 
+            SSID: ESP32S2-UVC Sem senha por padrão
     Digite 192.168.4.1 em seu navegador para abrir a janela de operação
     Clique em Iniciar transmissão para iniciar a transmissão de vídeo
     Clique em Parar para tirar uma foto
