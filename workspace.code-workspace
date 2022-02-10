@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "esp32s2",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"app_httpd.h": "c",
+			"esp_log.h": "c",
+			"uvc_stream.h": "c",
+			"usb_types_stack.h": "c"
+		}
+	}
+}
